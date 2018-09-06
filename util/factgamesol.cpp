@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
+    int n;
     while(true) {
-        int n;
         scanf("%d", &n);
         while(n % 2 == 0) {
             printf("2x");
