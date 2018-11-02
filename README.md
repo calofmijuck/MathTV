@@ -1,2 +1,2 @@
-# MathTV
-Web Page Source for MathTV website: http://www.zxcvber.com
+# Web Studying
+Contains scripts and sources for my web page : http://www.zxcvber.com
