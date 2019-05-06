@@ -1,0 +1,40 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title> Effect Generator </title>
+    </head>
+    <body>
+        <br><br><p style="text-align:center;font-size:150%;">Input Random Text</p>
+        <p style="text-align:center"><input id="text" type="text" autocomplete="off" style="width:80%;height:30%; font-size:200%;text-align:center"></p>
+        <p id="res" style="font-weight:bold; font-size:200%; text-align:center"></p>
+        <script>
+            var input = document.getElementById("text");
+            var text;
+            var charArray = Object();
+            input.addEventListener("keyup", function(event) {
+                if(event.keyCode === 13) {
+                    charArray = Object();
+                    text = document.getElementById("text").value;
+                    // alert(text);
+                    document.getElementById("res").innerHTML = "";
+                    for(i = 0; i < text.length; i++) {
+                        charArray[i] = text[i];
+                        document.getElementById("res").innerHTML += "<span id=\"" + i + "\">" + charArray[i] + "</span>";
+                    }
+                }
+            });
+
+            var myVar = setInterval(function(){ colorful() }, 80);
+            // var colors = ["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+            var colors = ["maroon", "red", "orange", "yellow", "lime", "green", "aqua", "blue", "navy", "fuchsia", "purple"];
+	        var j = 0;
+
+	        function colorful() {
+                for(i = 0; i < text.length; i++) {
+                    document.getElementById(i).style.color = colors[(j + i) % colors.length];
+                }
+                j = (j + 1) % colors.length;
+            }
+        </script>
+    </body>
+</html>

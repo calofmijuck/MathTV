@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/page-icon.png">
+    <!--For Korean -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <!--For MathJax-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+    <!--For CSS-->
+    <link rel="stylesheet" href="../index.css">
+
+    <!--For Javascript-->
+    <script src="../index.js"></script>
+
+    <!--Title-->
+    <title>미분귀신 Math TV</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div id="site-header">
+          <table id="header">
+	<tr id="header-row1">
+	  <td id="header-name">
+	    <div class="header-title"> 미분귀신 Math TV </div>
+	  </td>
+	  <td id="header-social-bar">
+	    <div class="header-social-bar">
+	      <a href="https://www.facebook.com/calofmijuck/"><img src="../images/fb-icon.png" height="50px" width="50px"/></a>
+	      <a href="https://www.youtube.com/channel/UCjk7eHA_S2HfI586XivxJgA"><img src="../images/yt-icon.png" height="50px" width="50px"/></a>
+	      <a href="#"> <img src="../images/kt-icon.png" height="50px" width="50px"/> </a>
+	    </div>
+	  </td>
+	</tr>
+          </table>
+        </div>
+        <table text-align="center">
+          <tr id="header-row2" style="text-align:center">
+	<td id="others" width="150px"><a href="../index.html">Home</a></td>
+	<td id="others" width="150px"><a href="../talks/index.html">Math Talks</a></td>
+	<td id="current" width="150px"><a href="2018.html">Problems</a></td>
+	<td id="others" width="150px"><a href="../data/index.html">Data</a></td>
+	<td id="others" width="150px"><a href="../profile.html">Profile</a></td>
+          </tr>
+        </table>
+
+      </header>
+
+      <hr>
+      <div class="navigation">
+        <p id="current"><a href="2018.html">2018</a></p>
+        <p><a href="2017.html">2017</a></p>
+        <p><a href="2016.html">2016</a></p>
+      </div>
+      <div class="contents">
+        <p class="post">
+          <span style="font-weight:bold;font-size:150%">Problem List</span><br>
+          These are the problems posted on the year 2018. Click to view!<br><br>
+          <span class="opener" onclick="problem(1);">01: Irrational Sum</span> <span class="date">(Jan 2, 2018)</span>
+          <span class="p_state" id="p1" style="display: none;">
+              &nbsp;An infinite sequence \(a_n\) of natural numbers satisfy the following conditions for all \(n \in \mathbb{N}\). <br><br>
+	          &nbsp;&nbsp;&nbsp;(1) \(a_n < a_{n+1} \)<br>
+			  &nbsp;&nbsp;&nbsp;(2) \(a_{n+2} + a_{n} > 2a_{n+1}\)
+              <br><br>
+              &nbsp; Show that the sum
+	          \[\Large \sum_{n=1}^{\infty} \frac{1}{10^{a_n}}\]
+	          is irrational.
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(2);">02: Periodic Function with Integral</span> <span class="date">(Jan 23, 2018)</span>
+          <span class="p_state" id="p2" style="display: none;">
+              &nbsp;Given a continuous function \(f(x)\) with period \(T\), show that
+              \[\Large \lim_{n \rightarrow \infty} \int_a^b f(nx) dx = \frac{b-a}{T}\int_0^T f(x)dx\]
+              for any \(a < b\).
+          </span>
+          <br><br>
+
+          <span class="opener" onclick="problem(3);">03: Cauchy-Schwarz ?</span> <span class="date">(Mar 1, 2018)</span>
+          <span class="p_state" id="p3" style="display: none;">
+              &nbsp;For \(x, y \in \mathbb{R}\) such that \(x^2+y^2=1\), find the minimum and maximum values of
+              \[\large (3x+2y)^2 + (x+2y)^2\]
+
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(4);">04: Differentiable Decimal</span> <span class="date">(Apr 26, 2018)</span>
+          <span class="p_state" id="p4" style="display: none;">
+              &nbsp;For a real number \(x\in \left[0, 1\right)\), its decimal representation is
+              \[\large x=\sum_{n=1}^{\infty} \frac{a_n}{10^n} = 0.a_1a_2a_3\cdots\]
+              and there doesn't exist \(k\in\mathbb{N}\) such that for all \(n\geq k \left(n \in\mathbb{N}\right)\), \(a_n=9\).<br>
+              &nbsp;Now define \(f: \left[0, 1\right) \rightarrow \mathbb{R}\) as
+              \[\large f(x)=\sum_{n=1}^{\infty} \frac{a_n}{10^{2n}}\] <br>
+              &nbsp;Find a value \(a\) in the domain of \(f\) such that \(f'(a)\) does not exist, and show that \(f\) is not differentiable.
+
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(5);">05: Who wants coffee?</span> <span class="date">(Oct 10, 2018)</span>
+          <span class="p_state" id="p5" style="display: none;">
+              This problem is a little story. <br>
+              When three professors are seated in a restaurant, the host asks them: "Does everyone want coffee?". <br>
+              The first professor says: "I do not know". <br>
+              The second professor says: "I do not know". <br>
+              Finally, the third professor says: "No, not everyone wants coffee." <br>
+              The host comes back and gives coffee to the professors who want it. <br>How did she figure out who wanted coffee?
+          </span>
+          <!-- Temporary Comment
+          <span class="opener" onclick="problem(2);">Problem 02: ???</span>
+          <span class="p_state" id="p2" style="display: none;">
+	Description of the Problem;
+          </span>
+          -->
+        </p>
+      </div>
+      <br>
+      <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer>Math Problems and Guides for Everyone! <br>Copyright 2017 &copy; All rights reserved. </footer>
+    </div>
+  </body>
+</html>

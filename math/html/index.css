@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+@font-face {
+    font-family: 'Nanum Myeongjo';
+}
+
+@font-face {
+    font-family: 'Nanum Gothic';
+}
+
+@font-face {
+    font-family: 'Open Sans';
+}
+
+@font-face {
+    font-family: 'NotoSans Regular';
+    src: url('fonts/NotoSansCJKkr-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('fonts/cmunrm.ttf');
+    unicode-range: U+0020-007F;
+}
+
+@font-face {
+    font-family: 'Computer Modern Bold';
+    src: url('fonts/cmunbx.ttf');
+    unicode-range: U+0020-007F;
+}
+
+
+body {
+    font-family: 'Open Sans', 'Nanum Gothic';
+    background-color: #ddfaf8;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.container {
+    padding: 0px 10px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+    text-decoration:underline;
+}
+
+table#header {
+    background-color:transparent;
+    width:100%;
+}
+
+div.header-title {
+    color:#2144a7;
+    font-weight:bold;
+    font-size: 200%;
+    margin: 20px 20px 20px 20px;
+}
+
+div.header-social-bar {
+    text-align:right;
+    padding-right: 10px;
+}
+
+tr#header-row2 {
+    font-size: 110%;
+    width: 100%;
+}
+
+td#current {
+    font-weight:bold;
+    font-size: 120%;
+    background-color:#7deeee;
+}
+
+div.navigation {
+    font-size:110%;
+    width: 160px;
+    float: left;
+    height: 100%;
+    border-right: 5px;
+    border-right-style: double;
+    border-color: grey;
+}
+
+div.talks_navigation {
+    font-size:80%;
+    width: 200px;
+    float: left;
+    height: 100%;
+    border-right: 5px;
+    border-right-style: double;
+    border-color: grey;
+}
+
+div.talks_contents {
+    margin-left: 210px;
+    margin-bottom: 20px;
+    border-width: 1px;
+    border-style: groove;
+    height: 100%;
+    border-color: black;
+}
+
+div.contents {
+    margin-left: 170px;
+    margin-bottom: 20px;
+    border-width: 1px;
+    border-style: groove;
+    height: 100%;
+    border-color: black;
+}
+
+p#current {
+    font-weight: bold;
+    background-color:#7deeee;
+}
+
+p.post {
+    margin-left: 25px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 100%;
+}
+
+p.talks_post {
+    margin-left: 25px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 100%;
+    line-height: 200%;
+    background-color: white;
+    border-left: 3px;
+    border-left-style: solid;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+span.opener {
+    font-size: 130%;
+    font-weight: bold;
+    color: green;
+}
+span.opener:hover {
+    color:red;
+    text-decoration: underline;
+}
+
+span.p_state {
+    margin-top: 3px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 120%;
+    color: black;
+    border-left: 3px;
+    border-left-style: solid;
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    background-color: white;
+    font-family: 'Computer Modern', 'Nanum Gothic';
+}
+
+span.p_state_bold {
+    font-family: 'Computer Modern Bold', 'Nanum Gothic';
+}
+
+span.sol_opener {
+    color: green;
+}
+
+span.sol_opener:hover {
+    color:red;
+    text-decoration: underline;
+}
+
+span.p_solution {
+    margin-top: 3px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 100%;
+    color: black;
+    border-left: 2px solid #ffeb8e;
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    background-color: #fff9e3;
+    font-family: 'Computer Modern', 'Nanum Myeongjo';
+}
+
+span.nav_opener {
+    color: blue;
+}
+
+span.nav_opener:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+span.nav_opened {
+    margin-left: 6px;
+    border-left: 1px dashed gray;
+    padding-left: 10px;
+    word-wrap: break-word;
+
+}
+
+
+footer {
+    text-align:center;
+}

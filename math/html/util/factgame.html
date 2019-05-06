@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title> 소인수분해 게임 </title>
+    <link rel="stylesheet" href="factgame.css">
+  </head>
+  <body onload="generateNum(1)">
+    <p id="problem">다음 수를 소인수분해 하세요!</p>
+    <p id="example">곱하기는 x 로 제출하세요<br>예시) <b>12</b> 답: 2x2x3</p>
+    <p id="num" style="font-size:500%"></p>
+    <input id="answer" type="text" autocomplete="off">
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="score"><b>맞은 문제 수</b> : <span id="correct">0</span></p>
+    <p id="tryscore">시도 횟수 (정답률) : <span id="try">0</span> (<span id="rate">0</span>%)</p>
+
+    <script>
+    var exp = 2;
+    var input = document.getElementById("answer");
+    input.addEventListener("keyup", function(event) {
+        if(event.keyCode === 13) {
+            var product = 1;
+            var flag1 = true, flag2 = true;
+            var x = document.getElementById("answer").value;
+            var original = parseInt(document.getElementById("num").innerHTML);
+            var factorlist = x.split("x");
+            for(var i = 0; i < factorlist.length; i++) {
+                var factor = parseInt(factorlist[i]);
+                if(checkPrime(factor)) {
+                    product *= factor;
+                    continue;
+                } else {
+                    flag1 = false;
+                    break;
+                }
+            }
+            if(flag1 && product != original) {
+                flag2 = false;
+            }
+            var score = parseInt(document.getElementById("correct").innerHTML);
+            if(flag1 && flag2) {
+                score++;
+                document.getElementById("correct").innerHTML = score;
+                correct();
+            } else {
+                wrong();
+                if(!flag1) {
+                    document.getElementById("result2").innerHTML = "인수 중에 소수가 아닌 숫자가 있습니다";
+                }
+                if(!flag2) {
+                    document.getElementById("result2").innerHTML = "제출한 결과의 곱이 원래 숫자와 다릅니다";
+                }
+            }
+            var count = parseInt(document.getElementById("try").innerHTML) + 1;
+            document.getElementById("try").innerHTML = count;
+            document.getElementById("rate").innerHTML = Math.floor(score/count * 10000) / 100;
+            if(score >= (exp-1) * 6) {
+                exp++;
+            }
+        }
+    });
+
+    function generateNum(exp) {
+        document.getElementById("num").innerHTML = Math.floor(Math.random() * (Math.pow(10, exp) - 2)) + 2;
+    }
+    function checkPrime(x) {
+        if(x == 1) {
+            return false;
+        }
+        if(x == 2) {
+            return true;
+        }
+        if(x % 2 == 0) {
+            return false;
+        }
+        for(var i = 3; i * i <= x; i += 2) {
+            if(x % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function correct() {
+        document.getElementById("result").innerHTML = "맞았습니다!";
+        document.getElementById("result").style.color = "green";
+        document.getElementById("result").style.fontWeight = "bold";
+        document.getElementById("answer").value = "";
+        document.getElementById("result2").innerHTML = "";
+        generateNum(exp);
+    }
+
+    function wrong() {
+        document.getElementById("result").innerHTML = "틀렸습니다";
+        document.getElementById("result").style.color = "red";
+        document.getElementById("result").style.fontWeight = "normal";
+    }
+
+    </script>
+  </body>
+</html>

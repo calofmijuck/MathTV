@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="math/images/page-icon.png">
+        <!--For Korean -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+        <!--For MathJax-->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+        <!--For CSS-->
+        <link rel="stylesheet" href="index.css">
+
+        <!--Title-->
+        <title>Profile</title>
+
+        <!--Open in new Tabs-->
+        <base target="_blank">
+    </head>
+
+    <body>
+        <div id="profile">
+            <img id="profimg" src="math/images/profimg.jpg"/>
+            <span id="title">Hi! I'm Sungchan Yi!</span><br>
+            <span id="name"><b>이성찬</b> &nbsp;•&nbsp;  calofmijuck@snu.ac.kr </span><br>
+            <p>
+                <a href="https://github.com/calofmijuck"><img id="icon" src="math/images/github-icon.jpg"/></a>
+                <a href="javascript:alert('ID: calofmijuck');"><img id="icon" src="math/images/kt-icon.png"/></a>
+                <a href="https://www.facebook.com/sungchan1012"><img id="icon" src="math/images/fb-icon.png"/></a>
+                <a href="https://www.instagram.com/calofmijuck/"><img id="icon" src="math/images/insta-icon.png"/></a>
+                <a href="#"><img id="icon" src="math/images/twt-icon.png"/></a>
+                <a href="https://www.youtube.com/channel/UCjk7eHA_S2HfI586XivxJgA"><img id="icon" src="math/images/yt-icon.png"/></a>
+
+            </p>
+            <p>
+                <b>Undergraduate</b> in <b>CSE</b>, <b><a href="http://snu.ac.kr">Seoul National University</a></b>
+            </p>
+            <ul>
+                <li>서울대학교 보안연구동아리 <a href="http://guardian.snucse.org">Guardian</a> 회장 (2019)</li>
+                <li><a href="https://jokbo.zxcvber.com">서울대학교 교양수학 기출문제 사이트</a> (2018 ~ )</li>
+
+            </ul>
+            <p id="oneline"><i>컴퓨터의 다양한 분야를 공부하는 Programmer</i></p>
+            <span id="subtitle">Experience</span>
+            <hr id="line">
+            <table>
+                <tr>
+                    <td id="rowspan" rowspan="1">2017</td>
+                    <td>
+                        <span id="orgname"><a href="https://www.stac.edu/">St.Thomas Aquinas College</a></span>
+                        <br>
+                        Technical Assistant (2017. 7)
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowspan" rowspan="1">2019</td>
+                    <td>
+                        <span id="orgname"><a href="https://www.samsung.com/sec/">Samsung Electronics</a></span>
+                        <br>
+                            무선사업부 AI 개발그룹 현장 실습 (2019. 1 ~ 2019. 2)
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <span id="subtitle">Education</span>
+            <hr id="line">
+            <table>
+                <tr>
+                    <td id="rowspan" rowspan="1">2014</td>
+                    <td>
+                        <span id="orgname"><a href="https://hana.hs.kr">하나고등학교</a> (Hana Academy Seoul)</span>
+                        <br>
+                        재학: 2014. 3 ~ 2017. 2 (5기)
+                        <br>
+                        <ul id="tablelist">
+                            <li><span id="listname">수학 올림피아드 동아리 MO</span><br>
+                                부원: 2014 ~ 2016<br>
+                                학술부장: 2015</li>
+                            <li><span id="listname">미적분학 집현 \(\epsilon-\delta\)</span><br>
+                                행수: 2015 ~ 2016</li>
+                            <li><span id="listname">과학 잡지 동아리 Hanatura</span><br>
+                                부원: 2014 ~ 2015</li>
+
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowspan" rowspan="1">2017</td>
+                    <td>
+                        <span id="orgname"><a href="http://snu.ac.kr">서울대학교</a> (Seoul National University)</span>
+                        <br>
+                        재학: 2017. 3 ~ 현재
+                        <br>
+                        <ul id="tablelist">
+                            <li><span id="listname">주전공 <a href="https://cse.snu.ac.kr">컴퓨터공학부</a> (CSE)</span><br>
+                            학사과정, 2017. 3 ~</li>
+                            <li><span id="listname">부전공 <a href="http://www.math.snu.ac.kr">수리과학부</a> </span><br>
+                            학사과정, 2019. 3 ~</li>
+                            <li><span id="listname"><a href="https://snups.org">SNUPS</a> (SNU Problem Solving)</span><br>
+                            부원, 2017. 3 ~</li>
+                            <li><span id="listname"><a href="https://snups.org">Guardian</a></span><br>
+                            부원, 2017. 3 ~<br>
+                            <b>회장</b>, 2019. 3 ~</li>
+                            <li><span id="listname"><a href="http://www.wafflestudio.kr/">Waffle Studio</a></span><br>
+                            부원, 2018. 9 ~<br>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+
+            <span id="subtitle">Skills/Interests</span>
+            <hr id="line">
+            <table>
+                <tr>
+                    <td id="rowspan" rowspan="2">-</td>
+                    <td>
+                        <span id="orgname">English</span><br>
+                        <ul id="tablelist">
+                            <li>TOEIC: 965 (2018. 7)</li>
+                            <li>OPIc: AL (2019. 2)</li>
+                            <li>College English 2 : Writing (A-)</li>
+                            <li>Advanced English : Flim (A+)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="orgname">Mathematics</span><br>
+                        <ul id="tablelist">
+                            <li>Honor Calculus 1/2 (A-/A+)</li>
+                            <li>Engineering Mathematics 1/2 (A+/A0)</li>
+                            <li>Linear Algebra 1/2 (A+/A0)</li>
+                            <li>Discrete Mathematics (A0)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowspan" rowspan="1">2015</td>
+                    <td>
+                        <span id="orgname">MATLAB</span><br>
+                        Numerical Analysis of 2D Heat Equation with Finite Difference Methods
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowspan" rowspan="1">2017 ~ </td>
+                    <td>
+                        <span id="orgname">Problem Solving / Algorithms</span><br>
+                        with C++, Java, Python<br>
+                        <ul id="tablelist">
+                            <li><span id="listname"><a href="https://www.acmicpc.net/user/zxcvber">백준 온라인 저지</a> zxcvber</span><br>
+                                Solved 850 (2019. 3. 10 기준)</li>
+                            <li><span id="listname"><a href="http://codeforces.com/profile/calofmijuck">Codeforces</a> calofmijuck</span><br>
+                                </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowspan" rowspan="1">2017 ~</td>
+                    <td>
+                        <span id="orgname">Web Development</span>
+                        <br>
+                        HTML, CSS, Javascript, React, Django
+                        <br>
+                        <ul id="tablelist">
+                            <li><span id="listname"><a href="https://math.zxcvber.com">Math Website</a></span> (Under Repairment)<br>
+                            2017. 12 ~</li>
+                            <li><span id="listname"><a href="https://jokbo.zxcvber.com">서울대학교 교양수학 기출문제 모음</a></span><br>
+                            2018. 3 ~</li>
+                            <li><span id="listname"><a href="https://github.com/calofmijuck/2018WaffleStudio">Waffle Studio 활동</a></span><br>
+                            2018. 9 ~</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowspan" rowspan="1">2017 ~</td>
+                    <td>
+                        <span id="orgname">Server Management</span>
+                        <br>
+                        Ubuntu Server
+                        <br>
+                        <ul id="tablelist">
+                            <li><span id="listname">zxcvber.com</span> (This Server)<br>
+                            2017. 12 ~</li>
+                            <li><span id="listname">Guardian Lair</span> <br>
+                            Guardian 동아리 실습용, 2019. 3 ~
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowspan" rowspan="1">2018 ~</td>
+                    <td>
+                        <span id="orgname">Artificial Intelligence</span><br>
+                        Inspired by Tony Stark
+                        <br>
+                        <ul id="tablelist">
+                            <li><span id="listname"><a href="https://github.com/calofmijuck/pytorch-bert-fine-tuning">Fine-tuning with BERT</a></span><br>
+                            Natural Language Processing with Pytorch,
+                            2019. 1 ~ 2019. 2</li>
+                            <li>Studying...</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>

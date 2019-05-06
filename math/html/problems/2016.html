@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/page-icon.png">
+    <!--For Korean -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <!--For MathJax-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+    <!--For CSS-->
+    <link rel="stylesheet" href="../index.css">
+
+    <script src="../index.js"></script>
+    <!--Title-->
+    <title>미분귀신 Math TV</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div id="site-header">
+          <table id="header">
+	<tr id="header-row1">
+	  <td id="header-name">
+	    <div class="header-title"> 미분귀신 Math TV </div>
+	  </td>
+	  <td id="header-social-bar">
+	    <div class="header-social-bar">
+	      <a href="https://www.facebook.com/calofmijuck/"><img src="../images/fb-icon.png" height="50px" width="50px"/></a>
+	      <a href="https://www.youtube.com/channel/UCjk7eHA_S2HfI586XivxJgA"><img src="../images/yt-icon.png" height="50px" width="50px"/></a>
+	      <a href="#"> <img src="../images/kt-icon.png" height="50px" width="50px"/> </a>
+	    </div>
+	  </td>
+	</tr>
+          </table>
+        </div>
+        <table text-align="center">
+          <tr id="header-row2" style="text-align:center">
+	<td id="others" width="150px"><a href="../index.html">Home</a></td>
+	<td id="others" width="150px"><a href="../talks/index.html">Math Talks</a></td>
+	<td id="current" width="150px"><a href="2018.html">Problems</a></td>
+	<td id="others" width="150px"><a href="../data/index.html">Data</a></td>
+	<td id="others" width="150px"><a href="../profile.html">Profile</a></td>
+          </tr>
+        </table>
+
+      </header>
+
+      <hr>
+      <div class="navigation">
+        <p><a href="2018.html">2018</a></p>
+        <p><a href="2017.html">2017</a></p>
+        <p id="current"><a href="2016.html">2016</a></p>
+      </div>
+      <div class="contents">
+<p class="post">
+          <span style="font-weight:bold;font-size:150%">Problem List</span><br>
+          These are the problems posted on the year 2016. Click to view!<br><br>
+          <span class="opener" onclick="problem(1);">01: Inequality with Tangent</span> <span class="date"></span>
+          <span class="p_state" id="p1" style="display: none;">
+	&nbsp;Prove the following inequality for all \(n \in \mathbb{N}\). \[\Large \int_{0}^{\frac{\pi}{2}} \tan^{\sqrt{n}}{x}dx \geq \frac{\pi}{2}\]
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(2);">02: An Improper Integral</span>
+          <span class="p_state" id="p2" style="display: none;">
+	&nbsp;Find the conditions for \(a, b \in \mathbb{R}\) so that the following improper integral converges.
+	\[\Large \int_{0}^\infty \frac{x^a}{1+x^b} dx\]
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(3);">03: \(\pi\) and Infinite Series</span>
+          <span class="p_state" id="p3" style="display: none;">
+	&nbsp;Let \(a_n\) be the \(n\)-th digit below the decimal point of \(\pi\). Do the following series converge? <br><br>
+	&nbsp;(a) \(\Large \sum_{n=1}^{\infty} \frac{a_n}{10}\) <br><br>
+	&nbsp;(b) \(\Large \sum_{n=1}^{\infty} \frac{a_n}{10^n}\) <br><br>
+	&nbsp;(c) \(\Large \sum_{n=1}^{\infty} \frac{a_n}{9^n}\)
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(4);">04: Different Quadratics</span>
+          <span class="p_state" id="p4" style="display: none;">
+	&nbsp;Suppose non-negative integers \(a, b, c\) satisfy \(a+b+c=10\). <br>
+	&nbsp;How many different quadratic equations \(ax^2+bx+c=0\) are there?
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(5);">05: Inequality (1)</span>
+          <span class="p_state" id="p5" style="display: none;">
+	&nbsp;For positive real numbers \(a, b, c, d\), prove that \[\Large \frac{a+c}{a+b}+\frac{b+d}{b+c}+\frac{c+a}{c+d}+\frac{d+b}{d+a} \geq 4\]
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(6);">06: Sum of Divisors</span>
+          <span class="p_state" id="p6" style="display: none;">
+	&nbsp;We start with \(n = 2\). Two players A and B will take turns and add a divisor of \(n\) <span class="p_state_bold">except \(n\) itself</span>. The game starts with A, and the player who adds a divisor to result in a number greater than \(1990\) wins.
+	<br>&nbsp;Who is the winner?
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(7);">07: System of Trigonometric Equations</span>
+          <span class="p_state" id="p7" style="display: none;">
+	&nbsp;Find all solutions \(\left(x, y, z\right)\) to the following system.
+	\[\Large \cos{x} + \cos{y} + \cos{z} = \frac{3\sqrt{3}}{2}\]
+	\[\Large \sin{x} + \sin{y} + \sin{z} = \frac{3}{2}\]
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(8);">08: A Real-Valued Function</span>
+          <span class="p_state" id="p8" style="display: none;">
+	&nbsp;For \(x, y \in \mathbb{R}\), is there a real-valued function \(f(x)\) and \(g(y)\) which satisfies the following equation?
+	\[\Large x^2+xy+y^2=f(x)+g(y)\]
+	&nbsp;Find the functions, if it exists.
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(9);">09: Real Solutions of Equation</span>
+          <span class="p_state" id="p9" style="display: none;">
+	&nbsp;Find all real solutions to the following equations.
+	\[\Large x+y+z=0, \frac{1}{x}+\frac{1}{y}+\frac{1}{z}=0\]
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(10);">10: Kempner Series</span>
+          <span class="p_state" id="p10" style="display: none;">
+	&nbsp;Show that the <a href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)">Harmonic Series</a> \(\sum_{n=1}^{\infty} \frac{1}{n}\) diverges. <br>
+	&nbsp;Now we will modify the series by omitting all terms whose denominator (expressed in base \(10\)) contains a sequence of digits. (ex: \(12\), \(354\) etc.)<br>
+	&nbsp;<span class="p_state_bold">Show that the modified series converges.</span><br>
+	&nbsp;This is known as the <a href="https://en.wikipedia.org/wiki/Kempner_series">Kempner Series</a>.
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(11);">11: Product of Tangents</span>
+          <span class="p_state" id="p11" style="display: none;">
+	&nbsp;Evaluate the following expression.
+	\[\Large \prod_{n=1}^{45}\left(1+\tan{n^{\circ}}\right)\]
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(12);">12: Factorial and Perfect Squares</span>
+          <span class="p_state" id="p12" style="display: none;">
+	&nbsp;Find all \(n\in \mathbb{N}\) such that
+	\[\Large 1!+2!+\cdots+n! = \sum_{k=1}^n k!\] is a perfect square of an integer.
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(13);">13: Wallis Product</span>
+          <span class="p_state" id="p13" style="display: none;">
+	&nbsp;(1) For integers \(n \geq 2\), show that
+	\[\large \int_0^{\frac{\pi}{2}} \sin^{n}{x}dx = \frac{n-1}{n} \int_0^{\frac{\pi}{2}} \sin^{n-2}{x}dx\]
+	&nbsp;(2) Evaluate
+	\[\large \int_0^{\frac{\pi}{2}} \sin^{3}{x}dx, \int_0^{\frac{\pi}{2}} \sin^{5}{x}dx\]
+	&nbsp;(3) Show that
+	\[\large \int_0^{\frac{\pi}{2}} \sin^{2n+1}{x}dx = \frac{2\cdot 4\cdot 6\cdot \cdots \cdot (2n)}{3\cdot 5\cdot 7\cdot \cdots \cdot (2n+1)}\]
+	\[\large \int_0^{\frac{\pi}{2}} \sin^{2n}{x}dx = \frac{1\cdot 3\cdot 5\cdot \cdots \cdot (2n-1)}{2\cdot 4\cdot 6\cdot \cdots \cdot (2n)} \cdot \frac{\pi}{2}\]
+	<br> &nbsp;Now let \(I_n=\int_0^{\frac{\pi}{2}} \sin^{n}{x}dx\).<br><br>
+	&nbsp;(4) Show that
+	\[\large I_{2n+2} \leq I_{2n+1} \leq I_{2n}\] and \[\large \lim_{n \rightarrow \infty} \frac{I_{2n+1}}{I_{2n}} = 1\]
+	&nbsp;(5) <a href="https://en.wikipedia.org/wiki/Wallis_product">(Wallis Product)</a> Now show that
+	\[\large \prod_{n=1}^{\infty} \left(\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right)=\lim_{n \rightarrow \infty} \frac{2}{1} \cdot \frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5}\cdot\frac{6}{5} \cdot \frac{6}{7} \cdot \cdots \cdot \frac{2n}{2n-1} \cdot \frac{2n}{2n+1} = \frac{\pi}{2}\]
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(14);">14: A Differentiable Function</span>
+          <span class="p_state" id="p14" style="display: none;">
+	&nbsp;For a function \(f(x)\) with the whole real numbers as its domian, suppose that
+	\[\large \forall x, y \in \mathbb{R}, f(x+y)\geq f(x)+f(y)+\left(\tan{x}\tan{y}-1\right)^2\]
+	and \(f(0)\geq 1, f'(0)=1\). <br>
+	&nbsp;Find \(f'(3\pi)\).
+          </span>
+          <br><br>
+          <span class="opener" onclick="problem(15);">15: \(f(f(x))=x\)</span>
+          <span class="p_state" id="p15" style="display: none;">
+	&nbsp;For a differentiable function \(f: \left[0, 1\right] \rightarrow \mathbb{R}\) suppose that
+	\[\large f(f(x))=x, f(0)=1\]
+	Evaluate
+	\[\Large \int_0^1 \left(x-f(x)\right)^{2016}dx\]
+          </span>
+        </p>
+
+        </p>
+      </div>
+      <br>
+      <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer>Math Problems and Guides for Everyone! <br>Copyright 2017 &copy; All rights reserved. </footer>
+    </div>
+  </body>
+</html>

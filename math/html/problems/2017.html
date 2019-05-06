@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/page-icon.png">
+    <!--For Korean -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <!--For MathJax-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+    <!--For CSS-->
+    <link rel="stylesheet" href="../index.css">
+
+    <!--For Javascript-->
+    <script src="../index.js"></script>
+
+    <!--Title-->
+    <title>미분귀신 Math TV</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div id="site-header">
+          <table id="header">
+	<tr id="header-row1">
+	  <td id="header-name">
+	    <div class="header-title"> 미분귀신 Math TV </div>
+	  </td>
+	  <td id="header-social-bar">
+	    <div class="header-social-bar">
+	      <a href="https://www.facebook.com/calofmijuck/"><img src="../images/fb-icon.png" height="50px" width="50px"/></a>
+	      <a href="https://www.youtube.com/channel/UCjk7eHA_S2HfI586XivxJgA"><img src="../images/yt-icon.png" height="50px" width="50px"/></a>
+	      <a href="#"> <img src="../images/kt-icon.png" height="50px" width="50px"/> </a>
+	    </div>
+	  </td>
+	</tr>
+          </table>
+        </div>
+        <table text-align="center">
+          <tr id="header-row2" style="text-align:center">
+	<td id="others" width="150px"><a href="../index.html">Home</a></td>
+	<td id="others" width="150px"><a href="../talks/index.html">Math Talks</a></td>
+	<td id="current" width="150px"><a href="2018.html">Problems</a></td>
+	<td id="others" width="150px"><a href="../data/index.html">Data</a></td>
+	<td id="others" width="150px"><a href="../profile.html">Profile</a></td>
+          </tr>
+        </table>
+
+      </header>
+
+      <hr>
+      <div class="navigation">
+        <p><a href="2018.html">2018</a></p>
+        <p id="current"><a href="2017.html">2017</a></p>
+        <p><a href="2016.html">2016</a></p>
+      </div>
+      <div class="contents">
+        <p class="post">
+          <span style="font-weight:bold;font-size:150%">Problem List</span><br>
+          These are the problems posted on the year 2017. Click to view!<br><br>
+          <span class="opener" onclick="problem(1);">01: Unstacking Game</span> <span class="date">(Dec 29, 2017)</span>
+          <span class="p_state" id="p1" style="display: none;">
+	&nbsp;Suppose you have a stack of \(n\) blocks. A <span class="p_state_bold">move</span> is defined as taking \(k \left(\leq p-1\right)\) blocks from a stack of \(p\left(\geq 2\right)\) blocks and splitting the original stack into two stacks, each with blocks \(k\) and \(p-k\). For each <span class="p_state_bold">move</span> you get \(k(p-k)\) points.<br> &nbsp; For instance, you get \(3 \times 5=15\) points for moving \(3\) blocks from a stack of \(8\) blocks.<br>&nbsp;The player applies a <span class="p_state_bold">move</span> until there are \(n\) stacks, each with only \(1\) block left.
+	<br><br>&nbsp;<span class="p_state_bold">No matter what strategy you use, show that the total sum of points \(S(n)\) is always the same, and find \(S(n)\).</span>
+	<br> <br> <span class="sol_opener" onclick="solution(1)">Solution</span>
+	<span class="p_solution" id="s1" style="display:none;">
+	  (By Strong Induction)
+	  Let \[S(n) = \frac{n(n-1)}{2}\]
+	  For \(n = 2\), you can only move \(1\) block, and get \(S(2) = \frac{2\times 1}{2} = 1\) points. Formula for \(S(n)\) is true for this case.<br>
+	  Suppose the formula for \(S(i)\) is true for \(1 \leq i \leq n\). <br>
+	  When there are \(n+1\) blocks, take \(k \leq n+ 1\) blocks from the stack. <br>You will get \(k(n+1-k)\) points for this move.<br> From the induction hypothesis, from the remaining two stacks, you get \(S(k)+ S(n+1-k)\) points. Thus, you get a total of
+	  \[S(n+1)=k(n+1-k)+S(k)+S(n+1-k)\]
+	  points. Using the formula for \(S(n)\),
+	  \[S(n+1)=k(n+1-k)+\frac{k(k-1)}{2}+\frac{(n+1-k)(n-k)}{2} \]
+	  \[\therefore S(n+1)=\frac{(n+1)n}{2}\]
+	  Therefore the formula is true for \(n+1\).<br>
+	  No matter what strategy you use, the total sum of points will be equal to \(S(n)=\frac{n(n-1)}{2}\).
+	</span>
+          </span>
+<br><br>
+          <span class="opener" onclick="problem(2);">02: Tangent of Sum of Arctangents</span> <span class="date">(Aug 22, 2017)</span>
+          <span class="p_state" id="p2" style="display: none;">
+	&nbsp;Let \(t\) be defined as follows,
+	\[\Large t=\sum_{i=1}^{\infty} \arctan{\frac{1}{2i^2}}\]
+	<br>
+	&nbsp; Find \(\tan t\).
+          </span>
+          <br>
+        </p>
+      </div>
+      <br>
+      <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer>Math Problems and Guides for Everyone! <br>Copyright 2017 &copy; All rights reserved. </footer>
+    </div>
+  </body>
+</html>

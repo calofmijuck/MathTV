@@ -1,0 +1,39 @@
+body {
+    background-color: #b8f2f2;
+}
+
+p#problem {
+    margin-top: 5%;
+    font-size:200%;
+    text-align:center;
+    font-weight:bold;
+}
+p#example {
+    text-align:center;
+}
+
+input#answer {
+    width: 30%;
+    height: 20%;
+    margin-left: 35%;
+    margin-right: 35%;
+    font-size:175%;
+    text-align: center;
+}
+
+p#result {
+    text-align: center;
+    font-size:200%;
+}
+
+p#result2 {
+    text-align: center;
+    font-size:150%;
+}
+
+p#note {
+    color: red;
+    font-weight: normal;
+    text-align:center;
+    font-size:120%;
+}
