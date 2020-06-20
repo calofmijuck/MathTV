@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Crazy Phone Number</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Crazy Phone Number Input</h1>
+		<div class="form-group">
+			<label for="usr">Enter your phone number</label>
+			<input type="text" class="form-control" id="usr" value="0" readonly>
+		</div>
+		<div style="text-align:center">
+			<button type="button" class="btn btn-outline-primary btn-lg" onclick="add10()">+10</button>
+			<button type="button" class="btn btn-outline-secondary btn-lg" onclick="add1()">+1</button>
+			<button type="button" class="btn btn-outline-success btn-lg" onclick="mul3()">x3</button>
+			<button type="button" class="btn btn-outline-danger btn-lg" onclick="log()">log<sub>10</sub></button>
+			<button type="button" class="btn btn-outline-primary btn-lg" onclick="reset()">Reset</button>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	document.getElementById('usr').addEventListener("keydown", event => {
+		alert("반칙!!!!!");
+	})
+	function add10() {
+		let e = Number(document.getElementById('usr').value);
+		document.getElementById('usr').value = e + 10;
+	}
+
+	function add1() {
+		let e = Number(document.getElementById('usr').value);
+		document.getElementById('usr').value = e + 1;
+	}
+
+	function mul3() {
+		let e = Number(document.getElementById('usr').value);
+		document.getElementById('usr').value = e * 3;
+	}
+
+	function log() {
+		let e = Number(document.getElementById('usr').value);
+		document.getElementById('usr').value = Math.log10(e);
+	}
+
+	function reset() {
+		let e = Number(document.getElementById('usr').value);
+		document.getElementById('usr').value = 0;
+	}
+
+</script>
+
+</html>
