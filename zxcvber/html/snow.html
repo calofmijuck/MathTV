@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Let it Snow</title>
+</head>
+
+<body onload="init();">
+</body>
+<style>
+    body {
+        background-color: black;
+        overflow: hidden;
+    }
+
+    img.snow {
+        position: absolute;
+        height: auto;
+    }
+</style>
+<script>
+    function init() {
+        setInterval(makeSnow, 50);
+        setInterval(updateSnow, 10);
+    }
+
+    var snowFlakes = [];
+    var gc = [];
+    var opa = [0.2, 0.5, 0.9];
+
+    function randInt(min, range) {
+        return Math.floor(Math.random() * range) + min;
+    }
+
+    function makeSnow() {
+        var snow;
+        if (gc.length > 0) {
+            snow = gc.pop();
+            snow.removeAttribute("gc");
+        } else {
+            snow = document.createElement("img");
+            snowFlakes[snowFlakes.length] = snow;
+            document.body.appendChild(snow);
+        }
+
+        var sz = randInt(10, 15);
+        var bodyWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var xPos = randInt(0, bodyWidth - sz);
+        var expSpeed = sz * 0.1;
+        var theta = randInt(-15, 30);
+        var speed = randInt(0.9 * expSpeed, 0.2 * expSpeed);
+        var phi = randInt(0, 360);
+
+        snow.setAttribute("src", "snow.png");
+        snow.setAttribute("class", "snow");
+        snow.setAttribute("style", "width: " + sz + "px; left: " + xPos + "px; top: -" + randInt(sz, 10) + "px;");
+        snow.setAttribute("posx", xPos);
+        snow.setAttribute("posy", -sz);
+        snow.setAttribute("speedx", speed * Math.sin(theta * Math.PI / 180));
+        snow.setAttribute("speedy", speed * Math.cos(theta * Math.PI / 180));
+        snow.setAttribute("rotate", phi);
+        snow.setAttribute("opacity", opa[randInt(0, 3)]);
+    }
+
+    function updateSnow() {
+        var i, len = snowFlakes.length;
+        var bodyHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        for (i = 0; i < len; ++i) {
+            var snow = snowFlakes[i];
+            var posx = snow.getAttribute("posx");
+            var posy = snow.getAttribute("posy");
+            var speedx = snow.getAttribute("speedx");
+            var speedy = snow.getAttribute("speedy");
+            var rot = (Number(snow.getAttribute("rotate")) + 1) % 360;
+            var opac = Number(snow.getAttribute("opacity")) + randInt(-1, 3) * 0.01;
+            snow.style.transform = "rotate(" + rot + "deg)";
+            snow.style.left = Number(posx) + Number(speedx) + "px";
+            snow.style.top = Number(posy) + Number(speedy) + "px";
+            snow.style.opacity = opac;
+            snow.setAttribute("posx", Number(posx) + Number(speedx));
+            snow.setAttribute("posy", Number(posy) + Number(speedy));
+            snow.setAttribute("rotate", rot);
+            snow.setAttribute("opacity", opac);
+            if (!snow.getAttribute("gc") && posy >= bodyHeight) {
+                snow.setAttribute("gc", "1");
+                gc.push(snow);
+            }
+        }
+    }
+</script>
+
+</html>
